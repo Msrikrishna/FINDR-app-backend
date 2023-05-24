@@ -4,8 +4,10 @@ FINDR is a blockchain/ AI powered review app which gamifies the restaurant revie
 
 ### Running locally
 
-#### Install packages: `pip install -r requirements.txt`
-#### Run app: `python3 server.py` (Replace python3 with your python path if you do not use `python3` to start up a python terminal)
+#### Install packages: 
+`pip install -r requirements.txt`
+#### Run app: 
+`python3 server.py` (Replace python3 with your python path if you do not use `python3` to start up a python terminal)
 
 ### Endpoints
 
