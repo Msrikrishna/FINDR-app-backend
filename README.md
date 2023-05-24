@@ -2,6 +2,11 @@
 FINDR is a blockchain/ AI powered review app which gamifies the restaurant review process and offers incentives for the restaurant goers, reviewers and anyone who are generally interested in this space
 
 
+### Running locally
+
+#### Install packages: `pip install -r requirements.txt`
+#### Run app: `python3 server.py` (Replace python3 with your python path if you do not use `python3` to start up a python terminal)
+
 ### Endpoints
 
 ### Endpoint 1: `http://127.0.0.1:5000/v1/review-submit`
