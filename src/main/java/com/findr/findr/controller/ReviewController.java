@@ -17,10 +17,14 @@ public class ReviewController {
     @Autowired
     ReviewService reviewService;
 
-    @GetMapping("/v1/reviews-from-hashes/{restaurantId}")
-    private List<Review> getReviewsByRestaurantId(@PathVariable("restaurantId") String restaurantId) {
+    @PostMapping("/v1/reviews-from-hashes/{restaurantId}")
+    private List<Review> getReviewsByRestaurantId(@PathVariable("restaurantId") String restaurantId
+    , @RequestBody List<String> hashes) {
         log.info("restaurantId: {}", restaurantId);
-        return reviewService.getReviewsForRestaurant(restaurantId);
+        return reviewService.getReviewsForRestaurant(restaurantId)
+                .stream()
+                .filter(review -> hashes.contains(review.getReviewHash()))
+                .toList();
     }
 
     @PostMapping("/v1/review-submit")
